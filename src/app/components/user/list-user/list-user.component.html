@@ -1,0 +1,33 @@
+
+
+    
+ <input #search class="search" type="text" matInput placeholder="Buscar"  formControlName="" (keyup)="buscar(search.value)" required>
+    
+
+<div class="scroll"> 
+<mat-card class="example-card" *ngFor="let user of data;">
+    <!-- <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header> -->
+    <img class="image" mat-card-image src="{{user.avatar}}" alt="Photo">
+    <mat-card-content class="content">
+      <p>
+        <b>Nombres: </b> {{user.first_name}} {{user.last_name}}
+      </p>
+      <br>
+      <p>
+       <b>Email: </b> {{user.email}}
+      </p>
+     
+    </mat-card-content>
+    <mat-card-actions class="detail">
+        <button (click)="verDetalle(user)" style="background-color:deepskyblue;" color="primary" mat-button>Ver detalle</button>
+      </mat-card-actions>
+
+  </mat-card>
+
+  
+ </div> 
+
